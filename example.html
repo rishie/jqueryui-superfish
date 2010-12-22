@@ -4,56 +4,64 @@
 	<head>
 		<title>A very basic Superfish menu example</title>
 		<meta http-equiv="content-type" content="text/html;charset=utf-8">
-		<link rel="stylesheet" type="text/css" href="css/superfish.css" media="screen">
-		<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/redmond/jquery-ui-1.8.6.custom.css" media="screen">
+		<script type="text/javascript" src="js/jquery-1.4.3.min.js"></script>
 		<script type="text/javascript" src="js/hoverIntent.js"></script>
 		<script type="text/javascript" src="js/superfish.js"></script>
 		<script type="text/javascript">
 
 		// initialise plugins
 		jQuery(function(){
-			jQuery('ul.sf-menu').superfish();
+			$('ul#sf-menu').superfish({
+					pathClass:	'ui-state-active',
+					animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation 
+		            speed:       'slow',                          // faster animation speed
+		            target:		 '#target',
+	//	            onBeforeLoad:	function() { alert('start loading!');},
+	//	            onLoad: function() { alert('load complete!'); }
+		            autoArrows:  true                           // disable generation of arrow mark-up
+		        });
 		});
 
 		</script>
 	</head>
 	<body>
-		<ul class="sf-menu">
-			<li class="current">
-				<a href="#a">menu item</a>
+	<div id="content" class="ui-tabs ui-widget ui-widget-content ui-corner-all ui-helper-clearfix" style="height: 100%;">
+		<ul id="sf-menu"  class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+			<li class="ui-state-active"><a href="#a">menu item</a>
 				<ul>
 					<li>
 						<a href="#aa">menu item that is quite long</a>
 					</li>
-					<li class="current">
+					<li>
 						<a href="#ab">menu item</a>
-						<ul>
+						<!--<ul>
 							<li class="current"><a href="#">menu item</a></li>
 							<li><a href="#aba">menu item</a></li>
 							<li><a href="#abb">menu item</a></li>
 							<li><a href="#abc">menu item</a></li>
 							<li><a href="#abd">menu item</a></li>
-						</ul>
+						</ul>-->
 					</li>
 					<li>
 						<a href="#">menu item</a>
-						<ul>
+						<!--<ul>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
-						</ul>
+						</ul>-->
 					</li>
 					<li>
 						<a href="#">menu item</a>
-						<ul>
+						<!--<ul>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
-						</ul>
+						</ul>-->
 					</li>
 				</ul>
 			</li>
@@ -65,53 +73,53 @@
 				<ul>
 					<li>
 						<a href="#">menu item</a>
-						<ul>
+						<!--<ul>
 							<li><a href="#">short</a></li>
 							<li><a href="#">short</a></li>
 							<li><a href="#">short</a></li>
 							<li><a href="#">short</a></li>
 							<li><a href="#">short</a></li>
-						</ul>
+						</ul>-->
 					</li>
 					<li>
 						<a href="#">menu item</a>
-						<ul>
+						<!--<ul>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
-						</ul>
+						</ul>-->
 					</li>
 					<li>
 						<a href="#">menu item</a>
-						<ul>
+						<!--<ul>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
-						</ul>
+						</ul>-->
 					</li>
 					<li>
 						<a href="#">menu item</a>
-						<ul>
+						<!--<ul>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
-						</ul>
+						</ul>-->
 					</li>
 					<li>
 						<a href="#">menu item</a>
-						<ul>
+						<!--<ul>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
 							<li><a href="#">menu item</a></li>
-						</ul>
+						</ul>-->
 					</li>
 				</ul>
 			</li>
@@ -119,5 +127,6 @@
 				<a href="#">menu item</a>
 			</li>	
 		</ul>
+	</div>
 	</body>
 </html>
